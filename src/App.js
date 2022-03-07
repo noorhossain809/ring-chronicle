@@ -42,27 +42,40 @@ function App() {
                 News
               </Nav.Link>
             </Nav>
-            <Button variant="warning">Play Now</Button>
+            <button className="button">Play Now</button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <section>
         <div className="icon-div ">
-          <div className="d-flex">
+          <div className="d-flex my-1">
             <div className="Social_links p-2">
-              <a href="/">
-                <i class="fa-brands fa-twitter"></i>
+              <div className="d-flex gap-1 social_f">
+              <a className="facebook" href="/">
+                <i class="fa-brands fa-facebook" ></i>
+              </a>
+               <p>15k+</p>
+                </div>
+                <div className="d-flex gap-1 social_f">
+              <a className="twitter" href="/">
+                <i class="fa-brands fa-twitter" ></i>
               </a>
               <p>15k+</p>
-              <a href="/">
-                <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div className="d-flex gap-1 social_i">
+              <a className="instagram" href="/">
+                <i class="fa-solid fa-paper-plane" ></i>
               </a>
               <p>15k+</p>
-              <a href="/">
-                <i class="fa-brands fa-github-alt"></i>
+                </div>
+                <div className="d-flex gap-1 social_g">
+              <a className="cat" href="/">
+                <i class="fa-brands fa-github-alt" ></i>
               </a>
               <p>15k+</p>
+                </div>
+              
             </div>
           </div>
         </div>
@@ -90,7 +103,8 @@ function App() {
         </Container>
       </div>
 
-      <div className="AVR container-fluid">
+      <div className="AVR">
+      <div className=" container-fluid">
         <div className="p-5">
           <div className="d-flex mt-5 flex-sm-row flex-column">
             <div className="col-md-6">
@@ -119,6 +133,7 @@ function App() {
           </div>
         </div>
       </div>
+        </div>
       <div className="About_us ">
         <div className="d-flex mb-5 flex-sm-row flex-column">
           <div className="col-md-6">
@@ -345,9 +360,7 @@ function App() {
             <p className="mt-3">
               Lorem Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectet
             </p>
-            <div className="C_button">
-              <a href="/">Learn More</a>
-            </div>
+            <button className="button rounded-pill">Learn More</button>
           </div>
 
           <div className="Card">
@@ -359,9 +372,7 @@ function App() {
             <p className="mt-3">
               Lorem Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectet
             </p>
-            <div className="C_button">
-              <a href="/">Learn More</a>
-            </div>
+            <button className="button rounded-pill">Learn More</button>
           </div>
         </div>
         <div className="R_C mt-5">
@@ -374,9 +385,7 @@ function App() {
             <p className="mt-3">
               Lorem Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectet
             </p>
-            <div className="C_button">
-              <a href="/">Learn More</a>
-            </div>
+            <button className="button rounded-pill">Learn More</button>
           </div>
           <div className="Card">
             <div className="M_Card">
@@ -387,9 +396,7 @@ function App() {
             <p className="mt-3">
               Lorem Lorem ipsum dolor sit amet, ipsum dolor sit amet, consectet
             </p>
-            <div className="C_button">
-              <a href="/">Learn More</a>
-            </div>
+            <button className="button rounded-pill">Learn More</button>
           </div>
         </div>
       </div>
@@ -415,8 +422,37 @@ function App() {
             <div className="pstar"> </div>
             <div className="pstar"> </div>
           </div>
-          <div className="NFT_b">
-            <a href="/">
+          <div className="follow_icons">
+          <div className="d-flex ">
+            <div className="Social_links p-2">
+              <div className="d-flex gap-1 social_f">
+              <a className="facebook" href="/">
+                <i class="fa-brands fa-facebook" ></i>
+              </a>
+               
+                </div>
+                <div className="d-flex gap-1 social_f">
+              <a className="twitter" href="/">
+                <i class="fa-brands fa-twitter" ></i>
+              </a>
+             
+                </div>
+                <div className="d-flex gap-1 social_i">
+              <a className="instagram" href="/">
+                <i class="fa-solid fa-paper-plane" ></i>
+              </a>
+              
+                </div>
+                <div className="d-flex gap-1 social_g">
+              <a className="cat" href="/">
+                <i class="fa-brands fa-github-alt" ></i>
+              </a>
+            
+                </div>
+              
+            </div>
+          </div>
+            {/* <a href="/">
               <i class="fa-brands fa-twitter"></i>
             </a>
             <a href="/">
@@ -427,7 +463,7 @@ function App() {
             </a>
             <a href="/">
               <i class="fa-solid fa-paper-plane"></i>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -441,20 +477,18 @@ function App() {
               adipiscing vitae quis amet fames.
             </p>
           </div>
-          <div className="F_iconss">
-            <a href="/">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="/">
-              <i class="fa-brands fa-github-alt"></i>
-            </a>
-            <a href="/">
-              <i class="fa-solid fa-paper-plane"></i>
-            </a>
-          </div>
+          <div className="A_Links">
+                <a href="/">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="/">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="/">
+                  <i class="fa-brands fa-github-alt"></i>
+                </a>
+              </div>
         </div>
         <div class="footer_1">
           <h1>About Us</h1>

@@ -12,7 +12,7 @@ header {
   align-items: center;
 }
 .logo img {
-  width: 80px;
+  width: 70px;
   height: 60px;
 }
 .Header_links {
@@ -63,7 +63,7 @@ header {
   display: flex;
   gap: 20px;
   align-items: center;
-  
+  border: #009EFF;
 
 
 border-radius: 14px;
@@ -72,13 +72,66 @@ border-radius: 14px;
 .Social_links a {
   padding: 10px;
   border-radius: 50%;
-  background: linear-gradient(91.03deg, rgba(255, 254, 254, 0.23) -47.11%, rgba(255, 254, 254, 0.23) 110.32%);
-backdrop-filter: blur(30px);
+  /* background: linear-gradient(91.03deg, rgba(255, 254, 254, 0.23) -47.11%, rgba(255, 254, 254, 0.23) 110.32%);
+backdrop-filter: blur(30px); */
   
 }
 .Social_links a i {
   font-size: 25px;
-  color: linear-gradient(180deg, #1B77F2 0%, #62E3FF 100%);
+  
+}
+
+.social_f a{
+  width: 50px;
+  height: 50px;
+  background: rgba(45, 48, 61, 0.2);
+box-shadow: inset 0px -5px 12px rgba(11, 130, 203, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 50%;
+}
+.social_f a i {
+  font-size: 30px;
+}
+.facebook{
+  color:  #009EFF;
+}
+.social_g a{
+  width: 50px;
+  height: 50px;
+  background: rgba(45, 48, 61, 0.2);
+box-shadow: inset 0px -5px 12px rgba(100, 0, 248, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(30px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 50%;
+}
+.social_g a i {
+  font-size: 30px;
+}
+.social_i a{
+  width: 50px;
+  height: 50px;
+  background: rgba(45, 48, 61, 0.2);
+  box-shadow: inset 0px -5px 12px rgba(0, 194, 255, 0.35), inset 0px 2px 4px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  /* Note: backdrop-filter has minimal browser support */
+  
+  border-radius: 50%;
+}
+.social_i a i{
+  font-size: 30px;
+}
+.twitter{
+  
+  color: #00FAFA;
+}
+.instagram{
+ color: #00F0FF;
+}
+.cat{
+  color: #C049DD;
 }
 .Social_links p {
   left: calc(50% - 40px/2 - 111px);
@@ -177,6 +230,7 @@ margin-top: 20px;
     align-items: center;
     display: flex;
   }
+  
   /* .Social_links {
     margin-top: 30px;
     width: 100%;
@@ -185,6 +239,15 @@ margin-top: 20px;
   /* .Social_links a {
     margin-left: 30px;
   } */
+}
+
+.button{
+  width: 120px;
+  height: 45px;
+  border: none;
+  background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+  border-radius: 4px;
+
 }
 section {
   display: flex;
@@ -201,10 +264,10 @@ section {
   background-origin: center;
 }
 .icon-div{
-  width: 368px;
-height: 63px;
+  width: 478px;
+  height: 73px;
 left: 612px;
-margin-bottom: 160px;
+margin-bottom: 120px;
 
 background: linear-gradient(91.03deg, rgba(255, 254, 254, 0.23) -47.11%, rgba(255, 254, 254, 0.23) 110.32%);
 backdrop-filter: blur(30px);
@@ -229,11 +292,14 @@ section a {
   text-decoration: none;
   padding: 10px 40px;
   font-size: 20px;
-  background: linear-gradient(180deg, #9347b2 12%, #ffffff 100%);
+  background: #FAB340;
   color: black;
   border-radius: 50px;
   font-family: Work Sans;
 }
+/* .Social_links a i{
+  color: linear-gradient(180deg, #C049DD 0%, #6400F8 100%);
+} */
 @media screen and (max-width: 900px) {
   section h1 {
     font-size: 8vw;
@@ -361,10 +427,11 @@ section a {
   padding: 15px 50px;
   color: black;
   text-decoration: none;
-  background: linear-gradient(180deg, #9347b2 12%, #ffffff 100%);
+  background: #FAB340;
   font-family: Work Sans;
   border-radius: 50px;
   font-size: 25px;
+  border: none;
 }
 .Dotted_1 {
   background-image: url(image\ 7.png);
@@ -464,7 +531,7 @@ section a {
     padding: 15px 30px;
     color: black;
     text-decoration: none;
-    background: linear-gradient(180deg, #9347b2 12%, #ffffff 100%);
+    background: #FAB340;
     font-family: Work Sans;
     border-radius: 50px;
     font-size: 20px;
@@ -684,6 +751,7 @@ align-items: center; */
 }
 .C_button {
   margin: 20px 0px;
+  background-color: #FAB340;
 }
 @media screen and (max-width: 1000px) {
   .Card-Sections {
@@ -1093,10 +1161,24 @@ footer {
   padding-right: 40px;
 }
 .AVR {
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
-  height: auto;
-
-  background-color: #1d121a;
+  justify-content: start;
+  height: 74vh;
+  width: 100%;
+  min-width: fixed;
+  background-image: url(./AT.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: center;
+  
+}
+@media screen and (max-width: 768px) {
+  .AVR{
+    height: auto;
+  }
 }
 .AVR_L {
   padding: 30px;
@@ -1522,4 +1604,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.2
 }
 .token{
   background-color: #0E0D0D;
+}
+.follow_icons{
+  margin-right: 220px;
 }
