@@ -1,4 +1,12 @@
-import { Button, Container } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Offcanvas,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import img1 from "./1.png";
 import img2 from "./3.jpg";
 import "./App.css";
@@ -8,64 +16,56 @@ import logo from "./logo.jpg";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="logo">
-          <img src={logo} alt="headerlogo" />
-        </div>
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="black"
+        fixed="top"
+        variant="dark"
+      >
+        <Container>
+        <Navbar.Brand className="logo m-2" href="#home">
+        <img src={logo} alt="headerlogo" />
+          </Navbar.Brand>
+          
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="#features" className="text-white">Marketplace</Nav.Link>
+              <Nav.Link href="https://doc.theringchronicle.io/" className="text-white">
+                WhitePaper
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="#deets" className="text-white">Pitch deck</Nav.Link>
+              <Nav.Link href="#memes" className="text-white">
+                News
+              </Nav.Link>
+            </Nav>
+            <Button variant="warning">Play Now</Button>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-        <div className="Header_links">
-          <ul>
-            <li>
-              <a href="/">Marketplace</a>
-            </li>
-            <li>
-              <a href="https://doc.theringchronicle.io/">WhitePaper</a>
-            </li>
-            <li>
-              <a href="/">Pitch deck</a>
-            </li>
-            <li>
-              <a href="/">News</a>
-            </li>
-          </ul>
-        </div>
-        <Button size="lg" className="mx-3" variant="warning">Play Now</Button>
-        {/* <div className="Header_button">
-          <a href="/">
-            <i className="fa-solid fa-circle-play"></i>Play
-          </a>
-        </div> */}
-        {/* <div className="Social_links">
-          <a href="/">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="/">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="/">
-            <i class="fa-brands fa-github-alt"></i>
-          </a>
-        </div> */}
-      </header>
       <section>
         <div className="icon-div ">
-           <div className="d-flex">
-           <div className="Social_links p-2">
-          <a href="/">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <p>15k+</p>
-          <a href="/">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <p>15k+</p>
-          <a href="/">
-            <i class="fa-brands fa-github-alt"></i>
-          </a>
-          <p>15k+</p>
-        </div>
-             </div>
+          <div className="d-flex">
+            <div className="Social_links p-2">
+              <a href="/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <p>15k+</p>
+              <a href="/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <p>15k+</p>
+              <a href="/">
+                <i class="fa-brands fa-github-alt"></i>
+              </a>
+              <p>15k+</p>
+            </div>
           </div>
+        </div>
         <h1>
           WELCOME TO THE <br /> RING CHRONICLE
         </h1>
@@ -74,8 +74,8 @@ function App() {
       </section>
 
       <div className="advantage">
-      <Container >
-      <div className="NFT_m">
+        <Container>
+          <div className="NFT_m">
             <div className="pstar"> </div>
             <div className="pstar"> </div>
             <div className="pstar"> </div>
@@ -88,7 +88,7 @@ function App() {
             <div className="pstar"> </div>
           </div>
         </Container>
-        </div>
+      </div>
 
       <div className="AVR container-fluid">
         <div className="p-5">
@@ -148,15 +148,13 @@ function App() {
                 </p>
               </div>
               <div className="A_Links">
-                
-                  
                 <a href="/">
                   <i class="fa-brands fa-twitter"></i>
                 </a>
                 <a href="/">
                   <i class="fa-brands fa-instagram"></i>
                 </a>
-                
+
                 <a href="/">
                   <i class="fa-brands fa-github-alt"></i>
                 </a>
@@ -167,53 +165,79 @@ function App() {
             </div>
           </div>
         </div>
-       
       </div>
       <div className="token">
-       <h1 className="token ">Tokenomics</h1>
-      <p className="token_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero id faucibus <br /> convallis donec viverra nunc. Lorem ipsum dolor sit ametc.</p>
-      <div className="token_div">
-      <div className="private mx-auto d-block mt-5"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5></div>
-      
-      
-      <div className="roted_d"></div>
-      <div className="roted "></div>
-      
-      <div className="d-flex justify-content-evenly">
-      <div className="private  mt-5"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5>
-      <div className="top_middle_d"></div>
-      <div className="top_middle"></div>
+        <h1 className="token ">Tokenomics</h1>
+        <p className="token_p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin libero
+          id faucibus <br /> convallis donec viverra nunc. Lorem ipsum dolor sit
+          ametc.
+        </p>
+        <div className="token_div">
+          <div className="private mx-auto d-block mt-5">
+            <h5 className="private_h5 mt-2">
+              Private Sale <br />
+              5%
+            </h5>
+          </div>
+
+          <div className="roted_d"></div>
+          <div className="roted "></div>
+
+          <div className="d-flex justify-content-evenly">
+            <div className="private  mt-5">
+              <h5 className="private_h5 mt-2">
+                Private Sale <br />
+                5%
+              </h5>
+              <div className="top_middle_d"></div>
+              <div className="top_middle"></div>
+            </div>
+            <div className="private mt-5">
+              <h5 className="private_h5 mt-2">
+                Private Sale <br />
+                5%
+              </h5>
+              <div className="top_middleEnd_d"></div>
+              <div className="top_middle_end"></div>
+            </div>
+          </div>
+
+          <div className="d-flex justify-content-center">
+            <div className="total_supply text-center">
+              <h5 className="total_h4 ">Total Supply</h5>
+              <p className="total_p ">21,000,000</p>
+            </div>
+          </div>
+          <div className="d-flex justify-content-evenly middle_s">
+            <div className="private  mt-5">
+              <h5 className="private_h5 mt-2">
+                Private Sale <br />
+                5%
+              </h5>
+              <div className="bottom_middleRight_d"></div>
+              <div className="bottom_middle_right"></div>
+            </div>
+            <div className="private mt-5">
+              <h5 className="private_h5 mt-2">
+                Private Sale <br />
+                5%
+              </h5>
+              <div className="bottom_middleEnd_d"></div>
+              <div className="bottom_middleEnd"></div>
+            </div>
+          </div>
+          <div className="roted_d"></div>
+          <div className="roted_bottom "></div>
+          <div className="roted_bottom_d"></div>
+          <div className="private mx-auto d-block">
+            <h5 className="private_h5 mt-2">
+              Private Sale <br />
+              5%
+            </h5>
+          </div>
+        </div>
       </div>
-      <div className="private mt-5"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5>
-      <div className="top_middleEnd_d"></div>
-      <div className="top_middle_end"></div>
-      </div>
-        </div>
-        
-        
-      <div className="d-flex justify-content-center">
-        
-      <div className="total_supply text-center">
-        <h5 className="total_h4 ">Total Supply</h5>
-        <p className="total_p ">21,000,000</p>
-        </div>
-        </div>
-        <div className="d-flex justify-content-evenly middle_s">
-      <div className="private  mt-5"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5>
-      <div className="bottom_middleRight_d"></div>
-      <div className="bottom_middle_right"></div>
-      </div>
-      <div className="private mt-5"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5>
-      <div className="bottom_middleEnd_d"></div>
-      <div className="bottom_middleEnd"></div>
-      </div>
-        </div>
-        <div className="roted_d"></div>
-      <div className="roted_bottom "></div>
-      <div className="roted_bottom_d"></div>
-        <div className="private mx-auto d-block"><h5 className="private_h5 mt-2">Private Sale <br />5%</h5></div>
-        </div>
-         </div>
       <div className="Road_M">
         <Container>
           <div className="Road_text">
@@ -278,37 +302,37 @@ function App() {
         </Container>
       </div>
       <div className="ETP">
-      <Container >
-      <div className="flex flex-sm-row flex-column justify-content-center align-items-center">
-        <div className="ETP_text">
-          <h1 className="text-center">Easy to Play , Play to Earn </h1>
-        </div>
-        <div className="mt-5">
-          <div className="video p-5 bg-dark" >
-            <iframe
-              className="embed-responsive-item"
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/UUnl6ePcUtY"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+        <Container>
+          <div className="flex flex-sm-row flex-column justify-content-center align-items-center">
+            <div className="ETP_text">
+              <h1 className="text-center">Easy to Play , Play to Earn </h1>
+            </div>
+            <div className="mt-5">
+              <div className="video p-5 bg-dark">
+                <iframe
+                  className="embed-responsive-item"
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/UUnl6ePcUtY"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div className="d-flex justify-content-between p-5">
+                <img src={dot} alt="" className="ETP_dot" />
+                <img src={dot} alt="" className="ETP_dot" />
+              </div>
+            </div>
+            <div className="ETP_icons">
+              <div className="star"></div>
+              <div className="star"></div>
+              <div className="star"></div>
+            </div>
           </div>
-          <div className="d-flex justify-content-between p-5">
-            <img src={dot} alt="" className="ETP_dot" />
-            <img src={dot} alt="" className="ETP_dot" />
-          </div>
-        </div>
-        <div className="ETP_icons">
-          <div className="star"></div>
-          <div className="star"></div>
-          <div className="star"></div>
-        </div>
+        </Container>
       </div>
-      </Container>
-        </div>
       <div className="Card-Sections ">
         <div className="L_C mt-5">
           <div className="Card ">
